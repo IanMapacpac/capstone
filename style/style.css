@@ -1,0 +1,404 @@
+:root{
+    --primary-color: #1C1D28;
+    --secondary-color: #F2CD08;
+    --heading-light-color: #D9D9D9;
+    --text-color-dark: #26272B;
+    --text-color-light: #FFFFFF;
+    --btn-color: #555;
+    --box-shadow-one: -10px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    --box-shadow-two:  13px 8px 16px 0px rgba(0, 0, 0, 0.25);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Poppins' sans-serif;
+    scroll-behavior: smooth;
+}
+nav, .main_footer{
+    background-color: var(--primary-color) ;
+}
+.divider{
+    background-color: var(--secondary-color);
+}
+.section_hero{
+    padding:10vw;
+}
+main{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main_text{
+    line-height: 150px; 
+    letter-spacing: 11.52px;
+}
+.text_span::first-letter{
+    color: var(--secondary-color);
+}
+.txt_container{
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+}
+.txt_container p{
+    margin-right: 1rem;
+    z-index: 1000 !important;
+}
+.logo{
+    background: transparent;
+    width: 4rem;
+    height: 4rem;
+}
+.nav-item:hover{
+    color: var(--heading-light-color);
+}
+.gov_img{
+    z-index: 1;
+    top: -1%;
+    left: 4%;
+}
+.bg_img-container{
+    position: absolute;
+    top: 7rem;
+}
+.section{
+    padding: 10vw;
+    position: relative;
+    z-index: 10;
+}
+.img-front{
+    box-shadow: var(--box-shadow-two);
+    z-index: 1;
+}
+.img-front-one{
+    box-shadow: var(--box-shadow-one);
+}
+.p_txt{
+    width: 70%;
+    text-align: justify;
+}
+@media (max-width: 760px){
+    .img_gov{
+        display: none;
+    }
+}
+.hiiden_nav{
+    float: right;
+    width: 300px;
+    padding: 10px;
+    overflow: auto;
+}
+body {
+    font-family: "Raleway", sans-serif;
+}
+.sidebar { /* SIDE BAR FOR REDUCED SCREEN SIZE*/
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: all 300ms ease-in-out;
+}
+.sidebar.active {
+    right: 0;
+}
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--heading-light-color);
+    transform: translateY(-50%);
+    transition: all 300ms ease-in-out;
+}
+.toggle-btn span:nth-child(1) {
+    top: 10%;
+}
+
+.toggle-btn span:nth-child(2) {
+    top: 50%;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 90%;
+}
+
+.sidebar.active .toggle-btn span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .toggle-btn span:nth-child(2) {
+    display: none;
+}
+
+.sidebar.active .toggle-btn span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+h2, .links a{
+    color: var(--text-color-dark);
+}
+.links a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;            
+    cursor: pointer;
+}
+.links a.active,
+.links a:hover {
+    color: var(--text-color-dark);
+}
+.links a i {
+    display: inline-block;
+    margin-right: 10px;
+}
+.sidebar{ /* SIDE BAR FOR REDUCED SCREEN SIZE*/
+        display: none;
+}
+@media  (max-width: 991px) {
+    .sidebar {
+        display: block  
+    }
+}
+#myBtn { /* AUTO SCROLL UP BTN */
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: var(--text-color-dark);
+    color: var(--secondary-color); 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+}
+#myBtn:hover {
+    background-color: var(--btn-color);
+}
+#more, #moree{
+    display: none;
+}
+.animation, .animation_two{ /* SCROLLANIMATION FOR ABOUT SECTION */
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: all 0.7s ease-out;
+    transition-delay: 0.4s;
+}
+.animation_two{
+    transform: translateX(30%);
+}
+.scroll-animation{
+    opacity: 1;
+    transform: translateX(0);
+}
+.login_container , .signup_container{ /*LOGIN CONTAINER*/
+    box-shadow: var(--box-shadow-two);
+    z-index: 1000;
+    position: absolute;
+    background: var(--text-color-light);
+    max-width: 25rem;
+    left: 50%;
+    overflow: hidden;
+    top: 3%;
+    height: 30rem;
+    border-radius: 4px;
+}
+.signup_container{
+    height: 100%;
+}
+.input-field{
+    position: relative;
+}
+.input-field input{
+    width: 330px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 1px solid #b9b9b9;
+    background: transparent;
+    color: var(--text-color-dark);
+    outline: none;
+}
+.fa-eye, .fa-eye-slash{
+    padding: .7rem .5rem;
+    margin: 0%;
+    border: 1px solid #b9b9b9;
+    border-radius: 10px;
+}
+.input-field #pass{
+    width: 290px;
+}
+.input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: transparent;
+    font-size: 19px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+input:focus{
+    border: 2px solid var(--secondary-color);
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 2px;
+    color: var(--text-color-dark);
+    background-color: var(--text-color-light);
+}
+.section_two-container{
+    background-color: var(--secondary-color);
+}
+.divider{
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+.link:hover{
+    width: 300px;
+    height: 49px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #F2CD08 0%, rgba(242, 205, 8, 0.00) 100%);
+    color: var(--primary-color);
+}
+.nav-link:hover { /*FOR LINK ANIMATION*/
+    opacity: 1;
+}.nav-link::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 70%;
+    background-color: var(--secondary-color);
+}
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 2px;
+}
+.nav-link-ltr:hover::before {
+    width: 3.5%;
+}
+.nav-link-fade-up::before {
+    width: 3.5%;
+    opacity: 0;
+}
+.nav-link-fade-up:hover::before {
+    opacity: 1;
+}
+.nav-link-grow-up::before {
+    width: 100%;
+}
+.nav-link-grow-up:hover::before {
+    height: 1px;
+}
+.main_container{
+    height: 100vh;
+}
+.section_one-container, .section_two-container{
+    height: 120vh;
+}
+.link__txt{
+    margin-left: 65%;
+    font-size: 12px;
+}
+.img__txt{
+    margin-left: 55%;
+    font-size: 10px;
+}
+.nav_container{
+    position: absolute;
+    left: 80%;
+    top: 20%;
+}
+.nav_container a{
+    margin-bottom: 5rem;
+}
+.nav_container a:hover{
+    color: var(--primary-color);
+}
+.nav_container a:active{
+    border-bottom: 2px solid var(--text-color-light);
+}
+.icon{
+    color: var(--text-color-light);
+}
+@media only screen and (max-width: 750px){ /*for adjusting position for login container*/
+
+    .main_container{
+        width: 100%;
+    }
+    .login_container, .signup_container{
+        width: 80%;
+        left: 4%;
+        right: 5%;
+    }
+    .signup_container{
+        height: 58rem;
+    }
+    .login_container input, .signup_container input{
+        width: 100%;
+    }
+    .nav_container{
+        position: absolute;
+        left: 88%;
+    }
+    .input-field #pass{
+        width:85%;
+    }
+    .text_container{
+        display: none;
+    }
+    .link__txt{
+        margin-left: 60%;
+    }
+    .img__txt{
+        margin-left: 55%;
+    }
+    .section_one-container, .section_two-container{
+        height: 140vh;
+    }
+}
+@media (min-width: 768px) and (max-width: 1257px){
+    .nav_container{
+        position: absolute;
+        left: 80%;
+        top: 20%;
+    }
+    .login_container, .signup_container{
+        width: 100%;
+        left: 10%;
+        right: 15%;
+    }
+    .section_one-container .text_container{
+        margin-left: 5rem;
+    }
+}
+#first_nm::placeholder, 
+#last_nm::placeholder, 
+#mid_nm::placeholder,
+#barangay::placeholder,
+#municipality::placeholder,
+#province::placeholder{
+    font-size: 10px;
+}

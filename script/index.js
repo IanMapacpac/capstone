@@ -92,3 +92,15 @@ function showPass(){
         eye.classList = "fa-regular fa-eye";
     }
 }
+//for back btn
+function goBack() {
+    window.history.back();
+}
+//date placceholder
+$(document).ready(function() {
+    $('#datepicker').datepicker({
+    format: 'dd/mm/yyyy',
+    autoclose: true,
+    placeholder: 'Start Date'
+    });
+});

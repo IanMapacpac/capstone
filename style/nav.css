@@ -141,4 +141,24 @@ footer .logout{
     margin-left: 30%;
     font-size: 16px;
 }
+.head_content{
+    border-left: 2px solid var(--heading-light-color);
+    padding-left: 1rem;
+}
+.head_content img{
+    margin-left: 1rem;
+}
+.head_content p{
+    font-size: 12px;
+}
+.profile_card-container{
+    display: none;
+}
+.profile_card-container.active{
+    width: 20rem;
+    z-index: 1001;
+    top: 8%;
+    right:0%;
+    display: block;
+}
 

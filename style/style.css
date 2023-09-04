@@ -221,7 +221,7 @@ h2, .links a{
     border-radius: 4px;
 }
 .signup_container{
-    height: 100%;
+    height: 45rem;
 }
 .input-field{
     position: relative;
@@ -273,7 +273,6 @@ input:valid ~ label{
 }
 .divider{
     border: 2px solid var(--secondary-color);
-    background-color: var(--secondary-color);
 }
 .link:hover{
     width: 300px;
@@ -313,18 +312,21 @@ input:valid ~ label{
     height: 1px;
 }
 .main_container{
-    height: 100vh;
+    height: 110vh;
 }
 .section_one-container, .section_two-container{
-    height: 120vh;
+    height: 110vh;
+}
+.upload{
+    font-size: 12px;
 }
 .link__txt{
     margin-left: 65%;
     font-size: 12px;
 }
 .img__txt{
-    margin-left: 55%;
-    font-size: 10px;
+    margin-left: 65%;
+    font-size: 8px;
 }
 .nav_container{
     position: absolute;
@@ -343,7 +345,7 @@ input:valid ~ label{
 .icon{
     color: var(--text-color-light);
 }
-@media only screen and (max-width: 750px){ /*for adjusting position for login container*/
+@media  only screen and (max-width: 780px){ /*for adjusting position for login container*/
 
     .main_container{
         width: 100%;
@@ -354,7 +356,7 @@ input:valid ~ label{
         right: 5%;
     }
     .signup_container{
-        height: 58rem;
+        height: 60rem;
     }
     .login_container input, .signup_container input{
         width: 100%;
@@ -364,22 +366,30 @@ input:valid ~ label{
         left: 88%;
     }
     .input-field #pass{
-        width:85%;
+        width: 85%;
     }
     .text_container{
         display: none;
     }
     .link__txt{
-        margin-left: 60%;
-    }
-    .img__txt{
         margin-left: 55%;
     }
+    .img__txt{
+        margin-left: 45%;
+    }
     .section_one-container, .section_two-container{
-        height: 140vh;
+        height: 180vh;
     }
 }
-@media (min-width: 768px) and (max-width: 1257px){
+@media (min-width: 280px) and (max-width: 365px){
+    .input-field #pass{
+        width: 80%;
+    }
+    .link__txt{
+        margin-left: 45%;
+    }
+}
+@media (min-width: 752px) and (max-width: 1257px){
     .nav_container{
         position: absolute;
         left: 80%;
@@ -394,11 +404,9 @@ input:valid ~ label{
         margin-left: 5rem;
     }
 }
-#first_nm::placeholder, 
-#last_nm::placeholder, 
-#mid_nm::placeholder,
-#barangay::placeholder,
-#municipality::placeholder,
-#province::placeholder{
+*::placeholder{
     font-size: 10px;
+}
+.address{
+    font-size: 12px;
 }

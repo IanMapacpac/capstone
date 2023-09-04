@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <title></title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <div class="menu-title p-0 m-0"><h2 class="p-3 pb-0">MENU</h2></div>
                 <hr>
                     <li class="item">
-                        <a href="#" class="p-3"><i class="fa-solid fa-chart-line"></i> &nbsp Dashboard</a>
+                        <a href="dashboard.php" class="p-3"><i class="fa-solid fa-chart-line"></i> &nbsp Dashboard</a>
                     </li>
                     <li class="item">
                       <div class="submenu-item p-3 row">
@@ -31,10 +32,10 @@
                           Maintenance
                         </div>
                         <li class="item">
-                          <a href="#" class="p-3"><i class="fa-solid fa-user-pen"></i> &nbsp User Maintenance</a>
+                          <a href="../admin/list_user.php" class="p-3"><i class="fa-solid fa-user-pen"></i> &nbsp User Maintenance</a>
                         </li>
                         <li class="item">
-                          <a href="#" class="p-3"><i class="fa-solid fa-gear"></i> &nbsp System Maintenance</a>
+                          <a href="../admin/system_main.php" class="p-3"><i class="fa-solid fa-gear"></i> &nbsp System Maintenance</a>
                         </li>
                         <li class="item">
                           <a href="#" class="p-3"><i class="fa-solid fa-building-shield"></i> &nbsp Project Maintenance</a>
@@ -42,44 +43,73 @@
                       </ul>
                     </li>
         </div>
-        <footer>
-              <p class="logo pt-3"><a href="#" class="col-9 logout">Logout</a></p>
-        </footer>
     </nav>
 
-    <nav class="navbar">
-        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+    <nav class="navbar position-relative top-0">
+      <i class="fa-solid fa-bars flex-start" id="sidebar-close"></i>
+      <div class="d-flex flex-end ">
+        <div class="head_content mt-0 mb-0 ">
+          <p class="text-dark h6">
+            <img src="../src/Pinterest.jpg" class="rounded-circle shadow-4" alt="Avatar" width="40px" height="40px" />&nbsp &nbsp
+              ADMIN
+              <button type="button" class="btn collapsible">
+              <i class="fa-solid fa-chevron-down"></i></button>
+          </p>
+        </div>
+        </div>
     </nav>
+    <div class="position-absolute card d-flex justify-content-end card p-3 profile_card-container collapsible-content m-0">
+            <div class="card shadow-sm p-3 mb-2">
+                <div class="d-flex">
+                    <img src="../src/Pinterest.jpg" class="rounded-circle shadow-4 p-0 col-2 m-1" alt="Avatar" width="50px" height="45px" />
+                    <h4 class="h4 col p-0 m-3 mt-3 text-secondary">ADMIN</h4>
+                </div>
+                <hr>
+            </div>
+            <a href="edit_user.php" class="mt-1 text-secondary text-start collapse_btn btn p-2">
+              <i class="fa-solid fa-user-pen"></i>&nbsp Edit Profile
+            </a>
+            <a href="edit_user.php" class="mt-1 text-secondary text-start collapse_btn btn p-2">
+              <i class="fa-solid fa-right-from-bracket"></i>&nbsp Logout
+            </a>
+      </div>
 
+    <script type="text/javascript">
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarClose = document.querySelector("#sidebar-close");
+      const menu = document.querySelector(".menu-content");
+      const menuItems = document.querySelectorAll(".submenu-item");
+      const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
 
+      sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
 
+      menuItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+          menu.classList.add("submenu-active");
+          item.classList.add("show-submenu");
+              menuItems.forEach((item2, index2) => {
+                  if (index !== index2) {
+                  item2.classList.remove("show-submenu");
+              }
+              });
+          });
+      });
 
-<script type="text/javascript">
-  const sidebar = document.querySelector(".sidebar");
-const sidebarClose = document.querySelector("#sidebar-close");
-const menu = document.querySelector(".menu-content");
-const menuItems = document.querySelectorAll(".submenu-item");
-const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+      subMenuTitles.forEach((title) => {
+          title.addEventListener("click", () => {
+              menu.classList.remove("submenu-active");
+          });
+      });
 
-sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+    document.addEventListener("DOMContentLoaded", function() {
+        const collapsibleButton = document.querySelector(".collapsible");
+        const collapsibleContent = document.querySelector(".profile_card-container");
 
-menuItems.forEach((item, index) => {
-item.addEventListener("click", () => {
-    menu.classList.add("submenu-active");
-    item.classList.add("show-submenu");
-        menuItems.forEach((item2, index2) => {
-            if (index !== index2) {
-            item2.classList.remove("show-submenu");
-        }
+        collapsibleButton.addEventListener("click", function() {
+            collapsibleContent.classList.toggle("active");
         });
     });
-});
 
-subMenuTitles.forEach((title) => {
-    title.addEventListener("click", () => {
-        menu.classList.remove("submenu-active");
-    });
-});
-</script>
+    </script>
 </body>
 </html>

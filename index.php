@@ -38,32 +38,30 @@
                 </div>
             </div>
         </nav>
-    </header>
+</header>
     <!--- SIDEBAR --->
     <div class="sidebar ">
         <div class="toggle-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="links text-justify">
-        <h2 class="m-3">Menu</h2>
-        <hr>
-        <a href="#main" class="link">
-            <i class="fa-solid fa-house"></i>
-            Home
-        </a>
-        
-        <a href="#about" class="link">
-            <i class="fa-solid fa-address-card"></i>
-            About
-        </a>
-        
-        <a href="#contact" class="link">
-            <i class="fa-solid fa-phone"></i>
-            Contacts
-        </a>
-    </div>
+            <h2 class="m-3">Menu</h2>
+            <hr>
+            <a href="#main" class="link">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+            <a href="#about" class="link">
+                <i class="fa-solid fa-address-card"></i>
+                About
+            </a>
+            <a href="#contact" class="link">
+                <i class="fa-solid fa-phone"></i>
+                Contacts
+            </a>
+        </div>
     </div>
 <!-- MAIN CONTENT -->
     <main class="container-fluid hero_container pt-0 mt-0 " id="main" style="background: url(src/bg-main.jpeg);">
@@ -103,24 +101,24 @@
         <div class="section_container row hidden pb-3" id="hidden" >
             <div class="img_container col-xl-4 col-lg-4 col-md-4 mt-1 ">
                 <div class="img">
-                    <img src="src/engr_1.jpg" alt="" class="img-fluid img-front-one animation">
+                    <img src="src/engr_1.jpg" class="img-fluid img-front-one animation">
                 </div>
             </div>
-            <div class="text_container col-xl-8 col-lg-8 col-md-8 ">
+            <div class=" col-xl-8 col-lg-8 col-md-8 ">
                 <h1 class="h1 pb-3 animation">Our Mission</h1>
                 <p class="p_txt pb-3 animation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iusto impedit assumenda nobis nisi veritatis! <span id="dots">...</span><span id="more">Perferendis modi libero sit dicta officia numquam nisi. Quas natus inventore soluta quidem mollitia expedita.</span></p>
                 <button class="btn btn-warning  text-white animation" onclick="myFunction()" id="moreBtn" type="button">Read More..</button>
             </div>
         </div>
-        <div class="section_container row mt-5 hidden" id="hidden">
-                <div class="text_container col-xl-8 col-lg-8 col-md-8 mb-3 ">
+        <div class="section_container row mt-5  hidden" id="hidden">
+                <div class=" col-xl-8 col-lg-8 col-md-8 mb-3 ">
                     <h1 class="h1 pb-3 animation_two">Our Vision</h1>
                     <p class="p_txt pb-3 animation_two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iusto impedit assumenda nobis nisi veritatis!<span id="dot">...</span><span id="moree"> Perferendis modi libero sit dicta officia numquam nisi. Quas natus inventore soluta quidem mollitia expedita.</span></p>
                     <button class="btn btn-warning  text-white animation_two" onclick="btnMore()" id="more_Btn" type="button">Read More..</button>
                 </div>
                 <div class="img_container col-xl-4 col-lg-4 col-md-4 ">
                     <div class="img img-two">
-                        <img src="src/engr_2.jpg" alt="" class="img-fluid img-front animation_two">
+                        <img src="src/engr_2.jpg" class="img-fluid img-front animation_two">
                     </div>
                 </div>
         </div>

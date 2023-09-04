@@ -42,58 +42,66 @@
         </div>
         <!-- LOGIN SECTION -->
         <div class="signup_container p-3 pt-3 mt-3 ">
-            <h3 class="log_text h2 fw-bold p-3 pt-2 ">Sign Up</h3>
+            <h3 class="log_text h2 fw-bold p-3 pt-2">Sign Up</h3>
             <hr class="w-25 divider m-3 mt-0">
             <form action="#" method="post" class="p-3 pb-5 pt-0 row gap-1">
-                <label for="fullname" class="form-label p-0 m-0 fw-bold">Full Name</label>
-                <div class="col-sm-4 m-0 p-0" name="fullname">
-                    <input type="text" name="first_name" id="first_nm" placeholder="First Name" class=" form-control " >
+                <label for="per_info" class="form-label p-0 m-0 fw-bold">Personal Information <span class="text-danger">*</span></label>
+                <div class="col-sm-4 m-0 p-0" name="per_info">
+                    <input type="text" name="first_name" id="name" placeholder="First Name" class=" form-control p-1" >
                 </div>
                 <div class="col-sm-4 m-0 p-0">
-                <input type="text" name="last_name" id="last_nm" placeholder="Last Name" class=" form-control " >
+                <input type="text" name="last_name" id="name" placeholder="Last Name" class=" form-control p-1" >
                 </div>
                 <div class="col-sm-3 m-0 p-0">
-                <input type="text" name="mid_name" id="mid_nm" placeholder="Middle Name" class=" form-control " >
+                <input type="text" name="mid_name" id="name" placeholder="Middle Name" class=" form-control p-1" >
                 </div>
-                <div class="col-md-5 m-0 p-0">
-                    <label for="prefix" class="form-label fw-bold">Prefix</label>
-                    <select name="prefix" id="prefix" class="form-select">
-                        <option value="#" class="form-option">Option 1</option>
+                <div class="col-sm-3 m-0 p-0 mt-2">
+                    <select name="prefix" id="prefix" class="form-select p-1">
+                        <option value="#" class="form-option" disabled selected>Prefix</option>
                         <option value="#" class="form-option">Option 2</option>
                         <option value="#" class="form-option">Option 3</option>
                     </select>
                 </div>
-                <div class="col-md-6 p-0 m-0">
-                    <label for="birth" class="form-label fw-bold">Birthdate</label>
-                    <input type="date" name="birth" id="birth" class="form-control">
+                <div class="col-md-4 p-0 m-0 mt-2">
+                    <input type="date" name="birth" id="birth" class="form-control p-1">
                 </div>
-                <label for="address" class="form-label p-0 m-0 fw-bold">Full Address</label>
-                <div class="col-sm-3 m-0 p-0" name="address">
-                    <input type="text" name="barangay" id="barangay" placeholder="Barangay" class=" form-control " >
+                <div class="col-md-4 p-0 m-0 mt-2">
+                    <input type="text" name="gender" id="gender" class="form-control p-1" placeholder="Gender">
                 </div>
-                <div class="col-sm-4 m-0 p-0">
-                <input type="text" name="municipality" id="municipality" placeholder="Municipality" class=" form-control " >
+                <div class="col-sm-3 m-0 p-0 mt-2" name="address ">
+                    <input type="text" name="barangay" id="address" placeholder="Barangay" class=" form-control p-1" >
                 </div>
-                <div class="col-sm-4 m-0 p-0">
-                <input type="text" name="province" id="province" placeholder="Province" class=" form-control " >
+                <div class="col-sm-4 m-0 p-0 mt-2">
+                <input type="text" name="municipality" id="address" placeholder="Municipality" class=" form-control p-1" >
                 </div>
-                <label for="con" class="form-label p-0 m-0 fw-bold">Contact Information</label>
+                <div class="col-sm-4 m-0 p-0 mt-2">
+                <input type="text" name="province" id="address" placeholder="Province" class=" form-control p-1" >
+                </div>
+                <label for="con" class="form-label p-0 m-0 fw-bold">Contact Information <span class="text-danger">*</span></label>
                 <div class="m-0 p-0" name="con">
-                    <input type="email" name="email" id="email" placeholder="Email Address" class="form-control">
+                    <input type="email" name="email" id="email" placeholder="Email Address" class="form-control p-1">
                 </div>
                 <div class=" p-0 m-0">
-                    <input type="number" name="contact_num" id="contact_num" class="form-control" placeholder="Contact Number">
+                    <input type="number" name="contact_num" id="contact_num" class="form-control p-1" placeholder="Contact Number">
                 </div>
-                <label for="account" class="form-label p-0 m-0 fw-bold">Account Verification</label>
+                <label for="account" class="form-label p-0 m-0 fw-bold">Account Information <span class="text-danger">*</span></label>
                 <div class="m-0 p-0">
-                    <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                    <input type="text" name="username" id="username" placeholder="Username" class="form-control p-1">
+                </div>
+                <div class="m-0 p-0 col">
+                    <input type="password" name="password" id="password" placeholder="Password" class="form-control p-1">
+                </div>
+                <div class=" m-0 p-0 col">
+                    <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm Password" class="form-control p-1">
+                </div>
+                <div class=" m-0 p-0 pb-0">
+                    <label for="profile_img" class="form-label fw-bold upload">Upload Profile Picture <span class="text-danger">*</span></label>
+                    <input type="file" name="profile_img" id="profile_img" class="form-control p-1" accept="image/*">
+                    <p class="text-decoration-none img__txt text-danger mb-0 pb-0">*image must not exceed to 3mb</p>
                 </div>
                 <div class=" m-0 p-0">
-                    <input type="password" name="confirm_pass" id="confirm_pass" placeholder="Confirm Password" class="form-control">
-                </div>
-                <div class=" m-0 p-0">
-                    <label for="id_img" class="form-label fw-bold">Upload Valid ID</label>
-                    <input type="file" name="id_img" id="id_img" class="form-control">
+                    <label for="id_img" class="form-label fw-bold upload mt-0 pt-0">Upload Valid ID <span class="text-danger">*</span></label>
+                    <input type="file" name="id_img" id="id_img" class="form-control p-1" accept="image/*">
                     <p class="text-decoration-none img__txt text-danger">*image must not exceed to 3mb</p>
                 </div>
                 <button type="submit" name="login" id="login" class="btn btn-warning text-white w-100 btn__log ">&nbsp<i class="fa-solid fa-right-to-bracket"></i> &nbsp Submit &nbsp</button>

@@ -44,18 +44,18 @@
         <div class="login_container p-3 pt-5 mt-5 ">
             <h3 class="log_text h2 fw-bold p-3 ">Login</h3>
             <hr class="w-25 divider mb-5 m-3 mt-0">
-            <form action="#" method="post" class="p-3 pb-5 pt-2">
+            <form action="login_pro.php" method="post" class="p-3 pb-5 pt-2">
                 <div class="input-field">
-                    <input type="text" required spellcheck="false" id="uName" name="uName">
+                    <input type="text" required spellcheck="false" id="username" name="username" >
                     <label for="">Enter Username</label>
                 </div>
                 <br>
                 <div class="input-field input-group">
-                    <input type="password" required  id="pass" name="pass">
+                    <input type="password" required  id="pass" name="pass" value="">
                     <i class="fa-regular fa-eye" onclick='showPass()' id="eye"></i>
                     <label for="">Enter Password</label>
                 </div>
-                <a href="#" class="text-decoration-none link__txt mb-3 text-primary ">Forgot Password?</a>
+                <a href="" class="text-decoration-none link__txt mb-3 text-primary ">Forgot Password?</a>
                 <br>
                 <button type="submit" name="login" id="login" class="btn btn-warning text-white w-100 btn__log mt-4 ">&nbsp<i class="fa-solid fa-right-to-bracket"></i> &nbsp Login &nbsp</button>
             </form>

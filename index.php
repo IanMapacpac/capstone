@@ -21,7 +21,6 @@
                 <div class="navbar-brand p-0 m-0 ">
                     <img src="src/logo2.png" alt="" srcset="" width="80" height="80">
                 </div>
-            
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <div class="mx-auto"></div>
                         <ul class="navbar-nav">

@@ -44,7 +44,7 @@
         <div class="signup_container p-3 pt-3 mt-3 ">
             <h3 class="log_text h2 fw-bold p-3 pt-2">Sign Up</h3>
             <hr class="w-25 divider m-3 mt-0">
-            <form action="#" method="post" class="p-3 pb-5 pt-0 row gap-1">
+            <form action="signup_pro.php" method="post" class="p-3 pb-5 pt-0 row gap-1">
                 <label for="per_info" class="form-label p-0 m-0 fw-bold">Personal Information <span class="text-danger">*</span></label>
                 <div class="col-sm-4 m-0 p-0" name="per_info">
                     <input type="text" name="first_name" id="name" placeholder="First Name" class=" form-control p-1" >
@@ -65,8 +65,12 @@
                 <div class="col-md-4 p-0 m-0 mt-2">
                     <input type="date" name="birth" id="birth" class="form-control p-1">
                 </div>
-                <div class="col-md-4 p-0 m-0 mt-2">
-                    <input type="text" name="gender" id="gender" class="form-control p-1" placeholder="Gender">
+                <div class="col-sm-3 m-0 p-0 mt-2">
+                    <select name="gender" id="gender" class="form-select p-1">
+                        <option value="#" class="form-option" disabled selected>Gender</option>
+                        <option value="Male" class="form-option">Male</option>
+                        <option value="Female" class="form-option">Female</option>
+                    </select>
                 </div>
                 <div class="col-sm-3 m-0 p-0 mt-2" name="address ">
                     <input type="text" name="barangay" id="address" placeholder="Barangay" class=" form-control p-1" >
@@ -77,15 +81,16 @@
                 <div class="col-sm-4 m-0 p-0 mt-2">
                 <input type="text" name="province" id="address" placeholder="Province" class=" form-control p-1" >
                 </div>
-                <label for="con" class="form-label p-0 m-0 fw-bold">Contact Information <span class="text-danger">*</span></label>
+                <label for="con" class="form-label p-0 m-0 fw-bold">Account Information <span class="text-danger">*</span></label>
                 <div class="m-0 p-0" name="con">
                     <input type="email" name="email" id="email" placeholder="Email Address" class="form-control p-1">
                 </div>
                 <div class=" p-0 m-0">
                     <input type="number" name="contact_num" id="contact_num" class="form-control p-1" placeholder="Contact Number">
                 </div>
-                <label for="account" class="form-label p-0 m-0 fw-bold">Account Information <span class="text-danger">*</span></label>
-                <div class="m-0 p-0">
+                <!-- <label for="account" class="form-label p-0 m-0 fw-bold">Account Information <span class="text-danger">*</span></label>
+                -->
+                <div class="m-0 p-0"> 
                     <input type="text" name="username" id="username" placeholder="Username" class="form-control p-1">
                 </div>
                 <div class="m-0 p-0 col">
